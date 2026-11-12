@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* =====================================
+   CONFIGURAÇÕES GERAIS
+===================================== */
+
+:root {
+    --azul: #102b4e;
+    --vermelho: #d92332;
+    --branco: #ffffff;
+    --fundo: #f4f7fb;
+    --cinza: #64748b;
+    --borda: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--fundo);
+    color: #334155;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Manrope', sans-serif;
+}
+
+h2 {
+    color: var(--azul);
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+p {
+    margin-bottom: 12px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =====================================
+   CABEÇALHO E MENU
+===================================== */
+
+header {
+    background: var(--azul);
+    color: var(--branco);
+    padding: 22px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+header h1 {
+    font-size: 26px;
+    color: var(--branco);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    list-style: none;
+}
+
+nav a {
+    color: var(--branco);
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ff7b85;
+}
+
+/* =====================================
+   CONTEÚDO PRINCIPAL
+===================================== */
+
+main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 20px;
+}
+
+section {
+    background: var(--branco);
+    padding: 35px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.04);
+    scroll-margin-top: 20px;
+}
+
+/* =====================================
+   PÁGINA INICIAL
+===================================== */
+
+.hero {
+    background: var(--azul);
+    color: var(--branco);
+    text-align: center;
+    padding: 75px 30px;
+}
+
+.hero h2 {
+    color: var(--branco);
+    font-size: 36px;
+    margin-bottom: 18px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 25px;
+    color: #e2e8f0;
+}
+
+.botao-principal {
+    display: inline-block;
+    background: var(--vermelho);
+    color: var(--branco);
+    padding: 13px 24px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.botao-principal:hover {
+    background: #b91c2a;
+    transform: translateY(-2px);
+}
+
+/* =====================================
+   TABELAS DE PREÇOS
+===================================== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background: var(--azul);
+    color: var(--branco);
+    padding: 15px;
+    text-align: left;
+}
+
+td {
+    padding: 13px 15px;
+    border-bottom: 1px solid var(--borda);
+}
+
+tbody tr:nth-child(even) {
+    background: #f1f5f9;
+}
+
+tbody tr:hover {
+    background: #e8eef6;
+}
+
+#especialidades table,
+#exames table {
+    display: table;
+    width: 100%;
+    table-layout: auto;
+    white-space: normal;
+    overflow: visible;
+}
+
+/* =====================================
+   SOBRE A CLÍNICA
+===================================== */
+
+.artigo-clinica {
+    background: var(--branco);
+    border-left: 5px solid var(--vermelho);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.artigo-clinica h2 {
+    color: var(--azul);
+}
+
+.artigo-clinica h3 {
+    color: var(--vermelho);
+    margin: 20px 0 10px;
+}
+
+.artigo-clinica p {
+    line-height: 1.8;
+}
+
+/* =====================================
+   CANVAS
+===================================== */
+
+.canvas-container {
+    width: 100%;
+    max-width: 650px;
+    margin: 25px auto 10px;
+    padding: 15px;
+    background: #f5f7fa;
+    border-radius: 12px;
+}
+
+#graficoServicos {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.legenda-grafico {
+    text-align: center;
+    color: var(--cinza);
+    font-size: 13px;
+}
+
+/* =====================================
+   ETAPA 10 - CARTÕES COM ÍCONES
+===================================== */
+
+#multimidia {
+    text-align: center;
+}
+
+.multimidia-intro {
+    color: var(--cinza);
+    max-width: 650px;
+    margin: 0 auto 30px;
+    line-height: 1.7;
+}
+
+.recursos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1100px;
+    margin: 30px auto 50px;
+}
+
+.recurso-card {
+    background: var(--branco);
+    padding: 28px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--borda);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recurso-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.10);
+}
+
+.recurso-icone {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.recurso-card h3 {
+    color: var(--azul);
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.recurso-card p {
+    color: var(--cinza);
+    line-height: 1.6;
+}
+
+/* =====================================
+   GALERIA DE IMAGENS
+===================================== */
+
+.titulo-galeria {
+    margin: 35px 0 25px;
+}
+
+.galeria-clinica {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto 50px;
+}
+
+.galeria-clinica figure {
+    margin: 0;
+    background: var(--branco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.galeria-clinica img {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.galeria-clinica figure:hover img {
+    transform: scale(1.04);
+}
+
+.galeria-clinica figcaption {
+    padding: 15px;
+    color: var(--azul);
+    font-weight: 700;
+}
+
+/* =====================================
+   VÍDEO INSTITUCIONAL
+===================================== */
+
+.titulo-video {
+    margin: 35px 0 20px;
+}
+
+.video-clinica {
+    width: 100%;
+    max-width: 850px;
+    margin: 25px auto;
+}
+
+.video-clinica video {
+    display: block;
+    width: 100%;
+    max-height: 480px;
+    background: #0f172a;
+    border-radius: 12px;
+}
+
+.aviso-video {
+    font-size: 13px;
+    color: var(--cinza);
+    margin-top: 12px;
+}
+
+/* =====================================
+   CONTATO
+===================================== */
+
+#contato {
+    text-align: center;
+}
+
+/* =====================================
+   FORMULÁRIO DE AGENDAMENTO
+===================================== */
+
+#agendamento {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 35px;
+    background: var(--branco);
+    border-radius: 12px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+#agendamento h2 {
+    margin-bottom: 15px;
+}
+
+#agendamento p {
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+#formAgendamento {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#formAgendamento label {
+    color: var(--azul);
+    font-weight: 700;
+    margin-top: 8px;
+}
+
+#formAgendamento input,
+#formAgendamento select,
+#formAgendamento textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    background: var(--branco);
+}
+
+#formAgendamento input:focus,
+#formAgendamento select:focus,
+#formAgendamento textarea:focus {
+    outline: 2px solid var(--azul);
+    border-color: var(--azul);
+}
+
+#formAgendamento button {
+    background: var(--azul);
+    color: var(--branco);
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+#formAgendamento button:hover {
+    background: var(--vermelho);
+}
+
+#feedbackAgendamento {
+    display: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#feedbackAgendamento.sucesso {
+    display: block;
+    background: #e8f7ed;
+    color: #16803c;
+    border: 1px solid #16803c;
+}
+
+#feedbackAgendamento.erro {
+    display: block;
+    background: #fdeaea;
+    color: var(--vermelho);
+    border: 1px solid var(--vermelho);
+}
+
+/* =====================================
+   RODAPÉ
+===================================== */
+
+footer {
+    background: var(--azul);
+    color: var(--branco);
+    text-align: center;
+    padding: 25px 15px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* =====================================
+   RESPONSIVIDADE - TABLET
+===================================== */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    .recursos-grid,
+    .galeria-clinica {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h2 {
+        font-size: 29px;
+    }
+}
+
+/* =====================================
+   RESPONSIVIDADE - CELULAR 425px
+===================================== */
+
+@media (max-width: 425px) {
+
+    header {
+        padding: 18px 10px;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .hero {
+        padding: 45px 18px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .recursos-grid,
+    .galeria-clinica {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-clinica img {
+        height: 220px;
+    }
+
+    #agendamento {
+        margin: 20px auto;
+        padding: 18px;
+    }
+
+    #formAgendamento button {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .canvas-container {
+        padding: 5px;
+    }
+}
+
+/* =====================================
+   RESPONSIVIDADE - CELULAR 375px
+===================================== */
+
+@media (max-width: 375px) {
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    section {
+        padding: 13px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    #agendamento {
+        padding: 12px;
+    }
+
+    #formAgendamento input,
+    #formAgendamento select,
+    #formAgendamento textarea {
+        font-size: 14px;
+    }
+}
+#especialidades,
+#exames {
+    width: 100%;
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#especialidades table,
+#exames table {
+    width: 100% !important;
+    min-width: 100%;
+    table-layout: fixed;
+}
+
+#especialidades td:first-child,
+#exames td:first-child {
+    width: 70%;
+}
+
+#especialidades td:last-child,
+#exames td:last-child {
+    width: 30%;
+}

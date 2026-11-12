@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento | Clínica Médica</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Clínica Médica</h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html#inicio">Início</a></li>
+            <li><a href="index.html#especialidades">Especialidades</a></li>
+            <li><a href="index.html#exames">Exames</a></li>
+            <li><a href="index.html#sobre">Sobre</a></li>
+            <li><a href="index.html#multimidia">Galeria</a></li>
+            <li><a href="agendamento.html">Agendamento</a></li>
+            <li><a href="index.html#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section id="agendamento">
+
+        <h2>Agende sua consulta</h2>
+
+        <p>
+            Preencha os campos abaixo para solicitar seu agendamento.
+            Nossa equipe poderá confirmar a disponibilidade.
+        </p>
+
+        <form id="formAgendamento">
+
+            <label for="nome">Nome completo:</label>
+            <input
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Digite seu nome completo"
+                minlength="3"
+                required
+            >
+
+            <label for="email">E-mail:</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="exemplo@email.com"
+                required
+            >
+
+            <label for="telefone">Telefone / WhatsApp:</label>
+            <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                placeholder="(83) 99999-9999"
+                inputmode="numeric"
+                maxlength="15"
+                pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}"
+                title="Digite um telefone válido com DDD."
+                required
+            >
+
+            <label for="especialidade">Especialidade desejada:</label>
+            <select id="especialidade" name="especialidade" required>
+                <option value="">Selecione uma especialidade</option>
+                <option>Acupuntura</option>
+                <option>Angiologia</option>
+                <option>Coloproctologia</option>
+                <option>Dermatologia</option>
+                <option>Endocrinologia</option>
+                <option>Gastroenterologia</option>
+                <option>Clínica Médica</option>
+                <option>Geriatria</option>
+                <option>Mastologia</option>
+                <option>Nefrologia</option>
+                <option>Neurologia</option>
+                <option>Nutrologia</option>
+                <option>Oftalmologia</option>
+                <option>Otorrinolaringologia</option>
+                <option>Patologia</option>
+                <option>Pediatria</option>
+                <option>Pneumologia</option>
+                <option>Psiquiatria</option>
+                <option>Psicologia</option>
+                <option>Reumatologia</option>
+                <option>Urologia</option>
+            </select>
+
+            <label for="data">Data desejada:</label>
+            <input
+                type="date"
+                id="data"
+                name="data"
+                required
+            >
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea
+                id="mensagem"
+                name="mensagem"
+                rows="5"
+                placeholder="Digite sua mensagem"
+                minlength="5"
+                required
+            ></textarea>
+
+            <div
+                id="feedbackAgendamento"
+                role="status"
+                aria-live="polite"
+            ></div>
+
+            <button type="submit">
+                Enviar solicitação pelo WhatsApp
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>Clínica Médica | João Pessoa - PB</p>
+    <p>&copy; 2026 Clínica. Todos os direitos reservados.</p>
+</footer>
+
+<script src="./script.js"></script>
+
+</body>
+</html>
